@@ -1,0 +1,45 @@
+[
+  {
+    "RoomName": "Dsadsadsa",
+    "RoomDescription": "sdadsadsa",
+    "Participants": [
+      {
+        "UserId": "179bce37-3883-4565-a360-c3b5e97498de",
+        "RoleId": "7e9d46a1-b76a-4c6b-a33d-1f07c583f712",
+        "Notifications": true
+      },
+      {
+        "UserId": "2952ffc6-f4ab-4bb4-baaf-b3e2eb94575e",
+        "RoleId": "19479a92-4a4e-4e6f-be8c-5bda6ab17e2b",
+        "Notifications": true
+      }
+    ],
+    "RoomRolesId": [
+      "7e9d46a1-b76a-4c6b-a33d-1f07c583f712",
+      "19479a92-4a4e-4e6f-be8c-5bda6ab17e2b"
+    ],
+    "TextChannelsId": [],
+    "BaseRoleId": "19479a92-4a4e-4e6f-be8c-5bda6ab17e2b",
+    "PhotoSource": "",
+    "Id": "c1d1f66e-5751-48f8-8010-7f1b393c799d"
+  },
+  {
+    "RoomName": "dasdsadsa",
+    "RoomDescription": "asdsadsad",
+    "Participants": [
+      {
+        "UserId": "179bce37-3883-4565-a360-c3b5e97498de",
+        "RoleId": "0fc8e79c-30b5-4f21-bb2f-c382ced8cac2",
+        "Notifications": false
+      }
+    ],
+    "RoomRolesId": [
+      "0fc8e79c-30b5-4f21-bb2f-c382ced8cac2",
+      "d273f91e-2056-466c-9e63-7f6ef594be47"
+    ],
+    "TextChannelsId": [],
+    "BaseRoleId": "d273f91e-2056-466c-9e63-7f6ef594be47",
+    "PhotoSource": "",
+    "Id": "e5852faf-4cc4-43de-8f95-3419cab310a3"
+  }
+]
