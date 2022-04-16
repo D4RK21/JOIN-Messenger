@@ -8,11 +8,11 @@ namespace DAL;
 public class AppContext : DbContext
 {
     private readonly AppSettings _appSettings;
-    
-    // public AppContext(IOptions<AppSettings> appSettings)
-    // {
-    //     _appSettings = appSettings?.Value ?? throw new ArgumentNullException(nameof(appSettings));
-    // }
+
+    public AppContext(DbContextOptions<AppContext> options) : base(options)
+    {
+        
+    }
     
     public DbSet<User> Users { get; set; }
 
@@ -32,9 +32,9 @@ public class AppContext : DbContext
     
     public DbSet<InviteLinksUsers> InviteLinksUsers { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        // _appSettings.ConnectionString
-        optionsBuilder.UseSqlServer("Server=LAPTOP-AJN7TDOI\\SQLEXPRESS;Database=AimAppDb;Trusted_connection=true");
-    }
+    // protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    // {
+    //     // _appSettings.ConnectionString
+    //     optionsBuilder.UseSqlServer("Server=DESKTOP-MPQ8K2S;Database=JoinMessenger;Trusted_connection=True;");
+    // }
 }
