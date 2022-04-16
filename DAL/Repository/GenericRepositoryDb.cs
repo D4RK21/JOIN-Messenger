@@ -81,9 +81,14 @@ namespace DAL.Repository
         //     _appContext.Entry(entityToUpdate).State = EntityState.Modified;
         // }
 
-        public async void Delete(TEntity entityToDelete)
+        public void Delete(TEntity obj)
         {
-            _dbSet.Remove(entityToDelete);
+            if (_appContext.Entry(obj).State == EntityState.Detached)
+            {
+                _dbSet.Attach(obj);
+            }
+            
+            _dbSet.Remove(obj);
         }
 
         // public async Task Delete(TEntity entityToDelete)
