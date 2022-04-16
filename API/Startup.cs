@@ -32,7 +32,8 @@ public class Startup
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration.GetSection("AppSettings:Secret").Value)),
                     ValidateIssuer = false,
-                    ValidateAudience = false
+                    ValidateAudience = false,
+                    ClockSkew = TimeSpan.Zero
                 }
             );
         services.AddSwaggerGen(options =>
@@ -44,7 +45,7 @@ public class Startup
                     Description = "I LOVE YOU GUYS",
                     In = ParameterLocation.Header,
                     Name = "Authorization",
-                    Type = SecuritySchemeType.Http
+                    Type = SecuritySchemeType.Http,
                 }
             );
             options.OperationFilter<SecurityRequirementsOperationFilter>();
